@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it along with the underlying tools (see 'references')."
+title: "ADME-Lab: Analog Design, Synthetic Reactions and Self-Verified ADME/Tox & IUPAC Prediction"
+abstract: >-
+  An open cheminformatics toolkit to design and enumerate molecules (R-group
+  decoration, BRICS, and an extensible synthetic-reaction engine), predict their
+  ADME properties and acute toxicity (LD50), assign self-verified IUPAC names via
+  an OPSIN round-trip, and rank/select candidates. Reaction types are pluggable
+  (esterification and amidation included).
+authors:
+  - family-names: "Anaya Guerrero"
+    given-names: "Diego César"
+    email: "diego.anayagro@gmail.com"
+version: 0.2.0
+date-released: "2026-08-04"
+license: MIT
+keywords:
+  - cheminformatics
+  - ADMET
+  - drug-design
+  - synthetic-reactions
+  - RDKit
+  - IUPAC
+references:
+  - type: article
+    title: "ADMET-AI: a machine learning ADMET platform for evaluation of large-scale chemical libraries"
+    authors:
+      - family-names: "Swanson"
+        given-names: "Kyle"
+    journal: "Bioinformatics"
+    year: 2024
+  - type: article
+    title: "Chemical Name to Structure: OPSIN, an Open Source Solution"
+    authors:
+      - family-names: "Lowe"
+        given-names: "Daniel M."
+    journal: "Journal of Chemical Information and Modeling"
+    year: 2011
+  - type: article
+    title: "Therapeutics Data Commons: Machine Learning Datasets and Tasks for Drug Discovery and Development"
+    authors:
+      - family-names: "Huang"
+        given-names: "Kexin"
+    journal: "NeurIPS Datasets and Benchmarks"
+    year: 2021
+  - type: software
+    title: "RDKit: Open-source cheminformatics"
+    authors:
+      - family-names: "Landrum"
+        given-names: "Greg"
+    url: "https://www.rdkit.org"

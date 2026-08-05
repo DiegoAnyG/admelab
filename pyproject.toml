@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "admelab"
+version = "0.2.0"
+description = "Cheminformatics toolkit: analog design, extensible synthetic reactions, and self-verified ADME/Tox & IUPAC prediction"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Diego César Anaya Guerrero", email = "diego.anayagro@gmail.com" },
+]
+keywords = ["cheminformatics", "ADMET", "drug-design", "synthetic-reactions", "RDKit", "IUPAC"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+dependencies = [
+    "rdkit>=2024.3",
+    "admet-ai>=2.0.1",
+    "scikit-learn>=1.3",
+    "pandas>=2.0",
+    "numpy>=1.26",
+    "openpyxl>=3.1",
+    "pubchempy>=1.0.5",
+    "tqdm>=4.66",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+]
+
+[project.optional-dependencies]
+notebook = ["jupyterlab>=4.0", "notebook>=7.0", "ipywidgets>=8.1"]
+
+[project.urls]
+Homepage = "https://github.com/dcanayag/admelab"
+Repository = "https://github.com/dcanayag/admelab"
+
+[tool.setuptools]
+packages = ["admelab"]
+
+# Note: verified IUPAC naming uses OPSIN (a Java .jar), which is NOT a pip
+# package. Install it with `bash tools_setup.sh` (downloads a portable JRE
+# + opsin.jar into tools/). Without it, naming falls back to PubChem/CACTUS
+# without verification.

@@ -1,0 +1,31 @@
+# ADME-Lab — Python dependencies
+# Verified environment: Python 3.12 (WSL Ubuntu 24.04), optional GPU.
+# Recommended install: bash setup_env.sh   (creates .venv and resolves everything)
+#
+# Note: admet-ai pulls in torch and chemprop. On Linux it installs torch with
+# CUDA by default; on machines without a GPU it still works on CPU (slower).
+
+# --- Chemistry and ML ---
+rdkit>=2024.3
+admet-ai>=2.0.1        # pulls torch, chemprop, lightning
+scikit-learn>=1.3
+
+# --- Data and utilities ---
+pandas>=2.0
+numpy>=1.26
+openpyxl>=3.1          # .xlsx reading (includes cell colors)
+pubchempy>=1.0.5       # IUPAC names from PubChem
+tqdm>=4.66
+
+# --- Visualization ---
+matplotlib>=3.8
+seaborn>=0.13
+
+# --- Notebook ---
+jupyterlab>=4.0
+notebook>=7.0
+ipywidgets>=8.1
+
+# --- Verified IUPAC naming (OPSIN) ---
+# OPSIN is a Java .jar, NOT a pip package. Install it with:
+#   bash tools_setup.sh   (downloads a portable JRE + opsin.jar into tools/)
