@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b2733"/>
+      <stop offset="1" stop-color="#103c3d"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#7dd3fc"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5b7387"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="380" rx="18" fill="url(#bg)"/>
+
+  <!-- decorative molecule: aromatic ring + ester arm -->
+  <g stroke="#5eead4" stroke-width="2.4" fill="none" opacity="0.55" stroke-linecap="round">
+    <polygon points="1096,96 1076,130 1036,130 1016,96 1036,62 1076,62"/>
+    <circle cx="1056" cy="96" r="22"/>
+    <path d="M1096 96 L1128 96"/>
+    <path d="M1128 96 L1128 72"/>
+    <path d="M1133 96 L1133 72"/>
+    <path d="M1128 96 L1150 110"/>
+  </g>
+  <text x="1150" y="120" fill="#5eead4" opacity="0.7" font-size="15" font-weight="600">O–R</text>
+
+  <!-- title -->
+  <text x="60" y="96" fill="url(#title)" font-size="62" font-weight="800" letter-spacing="-1">ADME-Lab</text>
+  <text x="63" y="132" fill="#a7c0d0" font-size="20" font-weight="500">Analog design · synthetic reactions · self-verified ADME/Tox &amp; IUPAC</text>
+  <rect x="64" y="150" width="150" height="4" rx="2" fill="#5eead4"/>
+
+  <!-- pipeline -->
+  <g>
+    <!-- connectors -->
+    <path d="M232 262 L270 262" stroke="#5b7387" stroke-width="2.4" marker-end="url(#arrow)"/>
+    <path d="M464 262 L502 262" stroke="#5b7387" stroke-width="2.4" marker-end="url(#arrow)"/>
+    <path d="M696 262 L734 262" stroke="#5b7387" stroke-width="2.4" marker-end="url(#arrow)"/>
+    <path d="M928 262 L966 262" stroke="#5b7387" stroke-width="2.4" marker-end="url(#arrow)"/>
+
+    <!-- step 1 -->
+    <rect x="40" y="205" width="192" height="115" rx="13" fill="#ffffff" fill-opacity="0.05" stroke="#38bdf8" stroke-opacity="0.75" stroke-width="1.5"/>
+    <circle cx="62" cy="229" r="11" fill="#38bdf8"/>
+    <text x="62" y="234" text-anchor="middle" fill="#04212e" font-size="13" font-weight="800">1</text>
+    <text x="56" y="264" fill="#e8f1f6" font-size="16" font-weight="700">Lead / Library</text>
+    <text x="56" y="288" fill="#93a7b6" font-size="12.5">SMILES input</text>
+    <text x="56" y="306" fill="#93a7b6" font-size="12.5">.xlsx / .csv</text>
+
+    <!-- step 2 -->
+    <rect x="272" y="205" width="192" height="115" rx="13" fill="#ffffff" fill-opacity="0.05" stroke="#2dd4bf" stroke-opacity="0.75" stroke-width="1.5"/>
+    <circle cx="294" cy="229" r="11" fill="#2dd4bf"/>
+    <text x="294" y="234" text-anchor="middle" fill="#04212e" font-size="13" font-weight="800">2</text>
+    <text x="288" y="264" fill="#e8f1f6" font-size="16" font-weight="700">Generate &amp; React</text>
+    <text x="288" y="288" fill="#93a7b6" font-size="12.5">R-group · BRICS</text>
+    <text x="288" y="306" fill="#93a7b6" font-size="12.5">esterify · amidate</text>
+
+    <!-- step 3 -->
+    <rect x="504" y="205" width="192" height="115" rx="13" fill="#ffffff" fill-opacity="0.05" stroke="#a78bfa" stroke-opacity="0.75" stroke-width="1.5"/>
+    <circle cx="526" cy="229" r="11" fill="#a78bfa"/>
+    <text x="526" y="234" text-anchor="middle" fill="#04212e" font-size="13" font-weight="800">3</text>
+    <text x="520" y="264" fill="#e8f1f6" font-size="16" font-weight="700">ADME + LD50</text>
+    <text x="520" y="288" fill="#93a7b6" font-size="12.5">ADMET-AI (ML)</text>
+    <text x="520" y="306" fill="#93a7b6" font-size="12.5">GHS toxicity</text>
+
+    <!-- step 4 -->
+    <rect x="736" y="205" width="192" height="115" rx="13" fill="#ffffff" fill-opacity="0.05" stroke="#34d399" stroke-opacity="0.75" stroke-width="1.5"/>
+    <circle cx="758" cy="229" r="11" fill="#34d399"/>
+    <text x="758" y="234" text-anchor="middle" fill="#04212e" font-size="13" font-weight="800">4</text>
+    <text x="752" y="264" fill="#e8f1f6" font-size="16" font-weight="700">Verify IUPAC</text>
+    <text x="752" y="288" fill="#93a7b6" font-size="12.5">OPSIN round-trip</text>
+    <path d="M752 300 l6 6 l12 -14" stroke="#34d399" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="776" y="306" fill="#93a7b6" font-size="12.5">structurally proven</text>
+
+    <!-- step 5 -->
+    <rect x="968" y="205" width="192" height="115" rx="13" fill="#ffffff" fill-opacity="0.05" stroke="#fbbf24" stroke-opacity="0.75" stroke-width="1.5"/>
+    <circle cx="990" cy="229" r="11" fill="#fbbf24"/>
+    <text x="990" y="234" text-anchor="middle" fill="#04212e" font-size="13" font-weight="800">5</text>
+    <text x="984" y="264" fill="#e8f1f6" font-size="16" font-weight="700">Rank &amp; Select</text>
+    <text x="984" y="288" fill="#93a7b6" font-size="12.5">composite score</text>
+    <text x="984" y="306" fill="#93a7b6" font-size="12.5">top / worst N</text>
+  </g>
+
+  <!-- footer tags -->
+  <text x="60" y="356" fill="#6f8798" font-size="14">RDKit · ADMET-AI · OPSIN · PubChem/CACTUS</text>
+  <text x="1140" y="356" text-anchor="end" fill="#6f8798" font-size="14">Python 3.12 · GPU-accelerated · MIT</text>
+</svg>

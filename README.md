@@ -1,4 +1,8 @@
-# 🧪 ADME-Lab
+<p align="center">
+  <img src="assets/banner.svg" alt="ADME-Lab — analog design, synthetic reactions and self-verified ADME/Tox & IUPAC prediction" width="880">
+</p>
+
+# ADME-Lab
 
 **Analog design · synthetic reactions · self-verified ADME/Tox & IUPAC prediction**
 
