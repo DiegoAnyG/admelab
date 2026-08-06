@@ -21,6 +21,7 @@ a catalog.
 | **Generate** analogs | `admelab.generation` | *R-group* position decoration with control over the **site** and the **number of substitutions**, plus **BRICS** recombination. |
 | **React** (extensible engine) | `admelab.reactions` · `admelab.esterification` | Targeted *core + partner* SMARTS reactions that **preserve stereochemistry**, validated by **exact atomic formula**. Includes **esterification** (with OH classification and **Fischer viability**) and **amidation**; adding a reaction = adding an entry to the `REACTIONS` catalog. Audits against a previous list and **name ↔ structure**. |
 | **Predict ADME** | `admelab.predict` | Layer 1: RDKit descriptors + rules (Lipinski, Veber, Egan, ESOL, QED, PAINS/Brenk). Layer 2: **ADMET-AI** (~41 ML endpoints). |
+| **Applicability domain** | `admelab.domain` | How far each molecule sits from what ADMET-AI was **actually trained on**, per endpoint, against the TDC training sets. Flags a prediction as **extrapolation** when the nearest training neighbour is further than the 5th percentile of that dataset's own nearest-neighbour similarities. |
 | **LD50 toxicity** | `admelab.toxicity` | LD50 (ADMET-AI) → **mg/kg** + **GHS** acute oral toxicity category. |
 | **IUPAC name** | `admelab.naming_smart` | **Self-verified** by *round-trip* (OPSIN): provenance offline + PubChem + CACTUS; an `iupac_verified` column guaranteeing the name reconstructs the structure. |
 | **Rank/select** | `admelab.ranking` | **Composite score** (max/min/target with weights) + **range filters** + *top*/*worst* N. |
